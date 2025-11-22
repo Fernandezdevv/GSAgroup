@@ -4,153 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Termos de Uso | GSA Group</title>
-    <!-- MANTÉM O CSS PRINCIPAL -->
-    <link rel="stylesheet" href="style.css"> 
+    <!-- CORREÇÃO -->
+    <link rel="stylesheet" href="../style.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* IMPORTAÇÃO DE VARIÁVEIS (GARANTIA) */
-        :root {
-            --gsa-blue: #0f172a;
-            --gsa-gold: #d4af37;
-            --gsa-dark: #020617;
-            --text-dark: #334155;
-            --text-light: #94a3b8;
-            --white: #ffffff;
-        }
-
-        /* 1. LAYOUT PRINCIPAL: STICKY FOOTER (O CORRETIVO) */
-        body { 
-            background-color: var(--white); 
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Garante que o body ocupe a altura total da tela */
-        }
-
-        /* 2. CONTEÚDO PRINCIPAL (EMPURRA O FOOTER) */
-        .main-content-wrapper {
-            flex-grow: 1; /* Faz esta div se expandir e empurrar o footer */
-        }
-        
-        /* 3. ESTILOS DE TEXTO E NAV (CONSISTENTE COM O CONTATO) */
-        .content-area {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 40px 20px 80px; /* Mais padding inferior */
-            line-height: 1.8;
-            color: var(--text-dark);
-        }
-        .content-area h1 {
-            color: var(--gsa-blue);
-            margin-bottom: 30px;
-            font-size: 2.2rem;
-            text-align: center;
-        }
-        .content-area h2 {
-            color: var(--gsa-gold);
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 5px;
-        }
-        .content-area ul {
-            list-style: disc;
-            margin-left: 30px;
-            margin-top: 10px;
-        }
-        
-        /* NAVBAR E FOOTER - GARANTIA DE ESTILO */
-        .nav-content-single {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .btn-return {
-            background: linear-gradient(135deg, var(--gsa-gold) 0%, #b49020 100%);
-            color: var(--white);
-            padding: 8px 15px;
-            border-radius: 12px;
-            font-weight: 700;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-            text-decoration: none !important;
-            display: inline-block;
-            font-size: 0.8rem;
-        }
+        :root { --gsa-blue: #0f172a; --gsa-gold: #d4af37; --gsa-dark: #020617; --text-dark: #334155; --text-light: #94a3b8; --white: #ffffff; }
+        body { background-color: var(--white); display: flex; flex-direction: column; min-height: 100vh; }
+        .main-content-wrapper { flex-grow: 1; }
+        .content-area { max-width: 850px; margin: 0 auto; padding: 40px 20px 80px; line-height: 1.8; color: var(--text-dark); }
+        .content-area h1 { color: var(--gsa-blue); margin-bottom: 30px; font-size: 2.2rem; text-align: center; }
+        .content-area h2 { color: var(--gsa-gold); margin-top: 30px; margin-bottom: 15px; font-size: 1.4rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; }
+        .content-area ul { list-style: disc; margin-left: 30px; margin-top: 10px; }
+        .nav-content-single { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid #f0f0f0; }
+        .btn-return { background: linear-gradient(135deg, var(--gsa-gold) 0%, #b49020 100%); color: var(--white); padding: 8px 15px; border-radius: 12px; font-weight: 700; transition: all 0.3s; text-transform: uppercase; box-shadow: 0 5px 10px rgba(0,0,0,0.15); text-decoration: none !important; display: inline-block; font-size: 0.8rem; }
         .btn-return:hover { transform: translateY(-2px); }
-        
-        footer {
-            background-color: var(--gsa-dark); 
-            color: #94a3b8; 
-            padding: 30px 0;
-            width: 100%;
-            text-align: center;
-        }
+        footer { background-color: var(--gsa-dark); color: #94a3b8; padding: 30px 0; width: 100%; text-align: center; }
     </style>
 </head>
 <body>
-    
-    <!-- 1. Navbar Corrigido (Idêntico ao Contato) -->
     <nav style="position: sticky; top: 0; background: var(--white); z-index: 100;">
         <div class="nav-content-single">
-            <div class="logo">
-                <strong style="color:var(--gsa-blue); font-size:1.5rem;">GSA <span style="font-weight:300">GROUP</span></strong>
-            </div>
-            <!-- Botão de retorno na nav -->
-            <a href="index.html" class="btn-return">Início</a>
+            <div class="logo"><strong style="color:var(--gsa-blue); font-size:1.5rem;">GSA <span style="font-weight:300">GROUP</span></strong></div>
+            <!-- CORREÇÃO -->
+            <a href="../index.html" class="btn-return">Início</a>
         </div>
     </nav>
-
-    <!-- 2. Conteúdo Principal (Empurra o footer) -->
     <div class="main-content-wrapper">
         <div class="container content-area">
-            <h1>Termos de Uso da Ferramenta Precificação Pro</h1>
-            
-            <p>Estes Termos de Uso regem o acesso e utilização da ferramenta digital "Precificação Pro" (a "Planilha") desenvolvida e comercializada pela GSA Group. Ao adquirir e utilizar a Planilha, você concorda com estes termos.</p>
-
-            <h2>1. LICENÇA DE USO (USO INDIVIDUAL)</h2>
-            <p>A GSA Group concede a você uma licença de uso **pessoal, intransferível e não exclusiva** da Planilha.</p>
-            <ul>
-                <li><strong>Uso:</strong> A Planilha destina-se estritamente ao uso individual do comprador, para fins de cálculo e gestão de seu próprio negócio (Delivery, Confeitaria, etc.).</li>
-                <li><strong>Acesso:</strong> O acesso é concedido por meio da plataforma Hotmart, após a confirmação do pagamento.</li>
-            </ul>
-
-            <h2>2. RESTRIÇÕES E PROIBIÇÕES (DIREITOS AUTORAIS)</h2>
-            <p>Você reconhece que a Planilha é protegida por leis de direitos autorais e propriedade intelectual. É estritamente proibido:</p>
-            <ul>
-                <li><strong>Revenda e Distribuição:</strong> Revender, sublicenciar, doar, ou distribuir a Planilha, seja em sua versão original ou modificada, de forma gratuita ou onerosa.</li>
-                <li><strong>Compartilhamento:</strong> Compartilhar o arquivo ou as credenciais de acesso com terceiros, incluindo sócios ou outros colaboradores.</li>
-                <li><strong>Engenharia Reversa:</strong> Tentar descompilar, desmontar ou modificar a lógica, fórmulas ou design da Planilha para criar um produto concorrente.</li>
-            </ul>
-            <p>O design, as fórmulas, a lógica de cálculo (Engenharia de Dados) e a estrutura visual da Planilha são de propriedade exclusiva da GSA Group.</p>
-
-            <h2>3. GARANTIA E ISENÇÃO DE RESPONSABILIDADE</h2>
-            <p>A GSA Group preza pela excelência e oferece total segurança jurídica e técnica:</p>
-            <ul>
-                <li><strong>Garantia de Satisfação:</strong> Oferecemos a garantia incondicional de 7 (sete) dias, conforme legislação do Código de Defesa do Consumidor. Caso não esteja satisfeito com a Planilha, você pode solicitar o reembolso integral dentro deste prazo na plataforma Hotmart.</li>
-                <li><strong>Isenção de Lucro:</strong> A Planilha é uma ferramenta de cálculo e gestão. A GSA Group **não garante, nem pode garantir, o lucro do seu negócio**. O sucesso financeiro depende exclusivamente da sua gestão, mercado e trabalho. A Planilha apenas fornece os dados necessários para que você tome as melhores decisões.</li>
-            </ul>
-            
-            <h2>4. CONTATO</h2>
-            <p>Para dúvidas sobre estes Termos ou qualquer outra questão, consulte a nossa <a href="contato.html" style="color: var(--gsa-blue); text-decoration: underline;">Página de Contato</a>.</p>
-
-            <p style="margin-top: 40px; font-size: 0.85rem; color: var(--text-light);">
-                Estes Termos de Uso foram atualizados em [Inserir Data Atual].
-            </p>
+            <h1>Termos de Uso</h1>
+            <p>Estes Termos de Uso regem o acesso e utilização da ferramenta digital "Precificação Pro".</p>
+            <h2>1. Licença de Uso</h2>
+            <p>A GSA Group concede licença pessoal, intransferível e não exclusiva.</p>
+            <h2>2. Proibições</h2>
+            <p>É proibida a revenda, distribuição ou engenharia reversa da planilha.</p>
+            <h2>3. Garantia</h2>
+            <p>Oferecemos garantia de 7 dias. O lucro depende da gestão do usuário.</p>
+            <h2>4. Contato</h2>
+            <!-- CORREÇÃO DO LINK INTERNO -->
+            <p>Dúvidas? Consulte a <a href="contato.html" style="color: var(--gsa-blue); text-decoration: underline;">Página de Contato</a>.</p>
         </div>
     </div>
-    
-    <!-- 3. FOOTER Corrigido -->
-    <footer>
-        <div class="container" style="font-size: 0.75rem;">
-            © 2025 GSA Group. Todos os direitos reservados.
-        </div>
-    </footer>
-
+    <footer><div class="container" style="font-size: 0.75rem;">© 2025 GSA Group. Todos os direitos reservados.</div></footer>
 </body>
 </html>

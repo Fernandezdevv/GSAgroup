@@ -4,216 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato | GSA Group</title>
-    <!-- MANTÉM O CSS PRINCIPAL -->
-    <link rel="stylesheet" href="style.css"> 
+    <!-- CORREÇÃO: Adicionado ../ para voltar uma pasta e achar o style.css -->
+    <link rel="stylesheet" href="../style.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* IMPORTAÇÃO DE VARIÁVEIS (GARANTIA) */
-        :root {
-            --gsa-blue: #0f172a;
-            --gsa-gold: #d4af37;
-            --gsa-dark: #020617;
-            --text-dark: #334155;
-            --text-light: #94a3b8;
-            --white: #ffffff;
-            --radius: 12px;
-        }
-
-        /* 1. LAYOUT PRINCIPAL - Fundo Branco Total e Alinhamento */
+        /* CSS Específico mantido */
+        :root { --gsa-blue: #0f172a; --gsa-gold: #d4af37; --gsa-dark: #020617; --text-dark: #334155; --text-light: #94a3b8; --white: #ffffff; --radius: 12px; }
         body { background-color: var(--white); }
-
-        .contact-page {
-            background-color: var(--white) !important; 
-            min-height: calc(100vh - 120px); /* Ajuste min-height para acomodar o footer */
-            padding: 80px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        /* 2. CARD - Estilo Clean (Sem sombra pesada) */
-        .contact-card {
-            background-color: var(--white);
-            max-width: 650px;
-            width: 90%;
-            padding: 50px;
-            border-radius: 18px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            border: 1px solid #e2e8f0; 
-            border-top: 4px solid var(--gsa-gold);
-        }
-
-        .contact-card h1 {
-            color: var(--gsa-blue);
-            margin-bottom: 5px;
-            font-size: 2.5rem;
-            font-weight: 800;
-        }
-        
-        .info-section {
-            display: flex;
-            gap: 40px;
-            margin-top: 40px;
-            text-align: left;
-        }
-        
-        .info-block {
-            flex: 1;
-            padding: 20px 0;
-            border-top: 1px solid #e2e8f0;
-        }
-        
-        .info-block h3 {
-            font-size: 1.1rem;
-            color: var(--gsa-gold);
-            margin-bottom: 10px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .email-btn {
-            background-color: var(--gsa-blue);
-            color: var(--white);
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 10px 15px;
-            border-radius: 6px;
-            transition: all 0.2s;
-            display: inline-block; 
-            text-decoration: none !important; 
-        }
-        .email-btn:hover {
-            background-color: var(--gsa-gold);
-            color: var(--gsa-blue);
-            transform: translateY(-1px);
-        }
-
-        /* Botão de Retorno (Identidade da Home) */
-        .btn-return {
-            background: linear-gradient(135deg, #d4af37 0%, #b49020 100%);
-            color: var(--white);
-            padding: 12px 25px;
-            border-radius: var(--radius);
-            font-weight: 700;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-            text-decoration: none !important;
-            display: inline-block;
-            margin-top: 30px;
-        }
-        .btn-return:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-        }
-
-        /* 3. CORREÇÃO NAVBAR (Alinhamento Horizontal) */
-        .nav-content-single {
-            display: flex; /* Garante que os elementos ficam lado a lado */
-            justify-content: space-between; /* Empurra logo para esquerda e botão para direita */
-            align-items: center;
-            padding: 15px 20px;
-            max-width: 1100px; /* Usa a largura máxima do container */
-            margin: 0 auto;
-            border-bottom: 1px solid #f0f0f0; 
-        }
-
-        /* 4. CORREÇÃO FOOTER (Cor e Espaçamento) */
-        footer {
-            /* Usa o Azul Marinho Profundo (idêntico ao da home) */
-            background-color: var(--gsa-dark); 
-            color: #94a3b8; /* Cor do texto mais suave */
-            padding: 30px 0;
-            margin-top: 0;
-            width: 100%;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .contact-card { padding: 30px 20px; }
-            .contact-card h1 { font-size: 2rem; }
-            .info-section { flex-direction: column; gap: 0; }
-        }
+        .contact-page { background-color: var(--white) !important; min-height: calc(100vh - 120px); padding: 80px 0; display: flex; align-items: center; justify-content: center; }
+        .contact-card { background-color: var(--white); max-width: 650px; width: 90%; padding: 50px; border-radius: 18px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); text-align: center; border: 1px solid #e2e8f0; border-top: 4px solid var(--gsa-gold); }
+        .contact-card h1 { color: var(--gsa-blue); margin-bottom: 5px; font-size: 2.5rem; font-weight: 800; }
+        .info-section { display: flex; gap: 40px; margin-top: 40px; text-align: left; }
+        .info-block { flex: 1; padding: 20px 0; border-top: 1px solid #e2e8f0; }
+        .info-block h3 { font-size: 1.1rem; color: var(--gsa-gold); margin-bottom: 10px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+        .email-btn { background-color: var(--gsa-blue); color: var(--white); font-weight: 600; font-size: 1rem; padding: 10px 15px; border-radius: 6px; transition: all 0.2s; display: inline-block; text-decoration: none !important; }
+        .email-btn:hover { background-color: var(--gsa-gold); color: var(--gsa-blue); transform: translateY(-1px); }
+        .btn-return { background: linear-gradient(135deg, #d4af37 0%, #b49020 100%); color: var(--white); padding: 12px 25px; border-radius: var(--radius); font-weight: 700; transition: all 0.3s; text-transform: uppercase; box-shadow: 0 5px 10px rgba(0,0,0,0.15); text-decoration: none !important; display: inline-block; margin-top: 30px; }
+        .btn-return:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
+        .nav-content-single { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid #f0f0f0; }
+        footer { background-color: var(--gsa-dark); color: #94a3b8; padding: 30px 0; margin-top: 0; width: 100%; text-align: center; }
+        @media (max-width: 768px) { .contact-card { padding: 30px 20px; } .contact-card h1 { font-size: 2rem; } .info-section { flex-direction: column; gap: 0; } }
     </style>
 </head>
 <body>
-    
-    <!-- Navbar Corrigido -->
     <nav style="position: sticky; top: 0; background: var(--white);">
         <div class="nav-content-single">
-            <div class="logo">
-                <strong style="color:var(--gsa-blue); font-size:1.5rem;">GSA <span style="font-weight:300">GROUP</span></strong>
-            </div>
-            <!-- Botão de retorno na nav -->
-            <a href="index.html" class="btn-return" style="font-size: 0.8rem; padding: 8px 15px;">Início</a>
+            <div class="logo"><strong style="color:var(--gsa-blue); font-size:1.5rem;">GSA <span style="font-weight:300">GROUP</span></strong></div>
+            <!-- CORREÇÃO: Adicionado ../ para voltar -->
+            <a href="../index.html" class="btn-return" style="font-size: 0.8rem; padding: 8px 15px; margin-top: 0;">Início</a>
         </div>
     </nav>
-    
     <div class="contact-page">
         <div class="contact-card container">
-            
             <h1 class="mb-2">Fale com o GSA Group</h1>
-            <p style="color: var(--text-light); margin-bottom: 40px; font-size: 1.1rem;">
-                Sua solicitação será tratada por especialistas em dados.
-            </p>
-
+            <p style="color: var(--text-light); margin-bottom: 40px; font-size: 1.1rem;">Sua solicitação será tratada por especialistas em dados.</p>
             <div class="info-section">
-                <!-- BLOCO 1: SUPORTE -->
                 <div class="info-block">
-                    <h3>
-                        <!-- Ícone de Email SVG -->
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="var(--gsa-gold)"><path d="M20,4H4C2.9,4 2,4.9 2,6V18C2,19.1 2.9,20 4,20H20C21.1,20 22,19.1 22,18V6C22,4.9 21.1,4 20,4M20,6L12,11L4,6V18H20V6M20,18H4V8L12,13L20,8V18Z"/></svg>
-                        Suporte e Dúvidas
-                    </h3>
-                    <p style="color: var(--text-dark); margin-bottom: 5px;">
-                        Nosso canal principal para suporte técnico e comercial é o email.
-                    </p>
-                    <!-- Email como botão sólido -->
-                    <a href="mailto:gsagroupp@gmail.com?subject=Contato%20via%20Site%20GSA%20Group" class="email-btn" style="margin-top: 15px;">
-                        gsagroupp@gmail.com
-                    </a>
-                    <p style="margin-top: 15px; font-size: 0.85rem; color: var(--text-light);">
-                        Resposta garantida em até 24 horas úteis.
-                    </p>
+                    <h3><svg viewBox="0 0 24 24" width="20" height="20" fill="var(--gsa-gold)"><path d="M20,4H4C2.9,4 2,4.9 2,6V18C2,19.1 2.9,20 4,20H20C21.1,20 22,19.1 22,18V6C22,4.9 21.1,4 20,4M20,6L12,11L4,6V18H20V6M20,18H4V8L12,13L20,8V18Z"/></svg> Suporte e Dúvidas</h3>
+                    <p style="color: var(--text-dark); margin-bottom: 5px;">Nosso canal principal para suporte técnico e comercial.</p>
+                    <a href="mailto:gsagroupp@gmail.com" class="email-btn" style="margin-top: 15px;">gsagroupp@gmail.com</a>
+                    <p style="margin-top: 15px; font-size: 0.85rem; color: var(--text-light);">Resposta garantida em até 24 horas úteis.</p>
                 </div>
-                
-                <!-- BLOCO 2: INFORMAÇÕES LEGAIS -->
                 <div class="info-block">
-                    <h3>
-                        <!-- Ícone de Escudo/Legal SVG -->
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="var(--gsa-gold)"><path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,20C10.5,19.4 9.15,18.5 8,17.4V14.5L12,12L16,14.5V17.4C14.85,18.5 13.5,19.4 12,20M12,16L8,13.5V6L12,8.5L16,6V13.5L12,16Z"/></svg>
-                        Dados da Empresa
-                    </h3>
-                    <p style="color: var(--text-dark); font-weight: 600; margin-bottom: 5px;">
-                        GSA Group Soluções Digitais
-                    </p>
-                    <p style="font-size: 0.85rem; color: var(--text-light);">
-                        CNPJ: [INSIRA O CNPJ AQUI] <br>
-                        Endereço: [INSIRA O ENDEREÇO AQUI]
-                    </p>
-                    <p style="font-size: 0.85rem; color: var(--text-dark); margin-top: 15px;">
-                        Operação 100% digital.
-                    </p>
+                    <h3><svg viewBox="0 0 24 24" width="20" height="20" fill="var(--gsa-gold)"><path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,20C10.5,19.4 9.15,18.5 8,17.4V14.5L12,12L16,14.5V17.4C14.85,18.5 13.5,19.4 12,20M12,16L8,13.5V6L12,8.5L16,6V13.5L12,16Z"/></svg> Dados da Empresa</h3>
+                    <p style="color: var(--text-dark); font-weight: 600; margin-bottom: 5px;">GSA Group Soluções Digitais</p>
+                    <p style="font-size: 0.85rem; color: var(--text-light);">CNPJ: [INSIRA AQUI]<br>Endereço: [INSIRA AQUI]</p>
+                    <p style="font-size: 0.85rem; color: var(--text-dark); margin-top: 15px;">Operação 100% digital.</p>
                 </div>
-
             </div>
-            
-            <!-- Botão de Retorno Principal (Dourado) -->
-            <a href="index.html" class="btn-return">
-                Voltar para a Home
-            </a>
+            <!-- CORREÇÃO: Adicionado ../ para voltar -->
+            <a href="../index.html" class="btn-return">Voltar para a Home</a>
         </div>
     </div>
-    
-    <!-- FOOTER Corrigido -->
-    <footer>
-        <div class="container" style="font-size: 0.75rem;">
-            © 2025 GSA Group. Todos os direitos reservados.
-        </div>
-    </footer>
-
+    <footer><div class="container" style="font-size: 0.75rem;">© 2025 GSA Group. Todos os direitos reservados.</div></footer>
 </body>
 </html>

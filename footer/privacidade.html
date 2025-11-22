@@ -4,29 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidade | GSA Group</title>
-    <link rel="stylesheet" href="style.css"> 
+    <!-- CORREÇÃO -->
+    <link rel="stylesheet" href="../style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --gsa-blue: #0f172a; --gsa-gold: #d4af37; --gsa-dark: #020617; --text-dark: #334155; --text-light: #94a3b8; --white: #ffffff; }
+        body { background-color: var(--white); display: flex; flex-direction: column; min-height: 100vh; }
+        .main-content-wrapper { flex-grow: 1; }
+        .content-area { max-width: 850px; margin: 0 auto; padding: 40px 20px 80px; line-height: 1.8; color: var(--text-dark); }
+        .content-area h1 { color: var(--gsa-blue); margin-bottom: 30px; font-size: 2.2rem; text-align: center; }
+        .content-area h2 { color: var(--gsa-gold); margin-top: 30px; margin-bottom: 15px; font-size: 1.4rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; }
+        .content-area ul { list-style: disc; margin-left: 30px; margin-top: 10px; }
+        .nav-content-single { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid #f0f0f0; }
+        .btn-return { background: linear-gradient(135deg, var(--gsa-gold) 0%, #b49020 100%); color: var(--white); padding: 8px 15px; border-radius: 12px; font-weight: 700; transition: all 0.3s; text-transform: uppercase; box-shadow: 0 5px 10px rgba(0,0,0,0.15); text-decoration: none !important; display: inline-block; font-size: 0.8rem; }
+        .btn-return:hover { transform: translateY(-2px); }
+        footer { background-color: var(--gsa-dark); color: #94a3b8; padding: 30px 0; width: 100%; text-align: center; }
+    </style>
 </head>
-<body style="padding-top: 50px; padding-bottom: 50px;">
-    <div class="container" style="max-width: 800px; line-height: 1.8;">
-        <h1 style="color: var(--gsa-blue); margin-bottom: 30px;">Política de Privacidade</h1>
-        
-        <p>A GSA Group preza pela sua privacidade e segurança. Esta política explica como coletamos, usamos e protegemos suas informações.</p>
-
-        <h2 style="color: var(--gsa-gold); margin-top: 40px; font-size: 1.5rem;">1. Coleta e Uso de Dados (O Pixel)</h2>
-        <p>Coletamos dados de navegação, como endereço IP e geolocalização, por meio de cookies e tecnologias de rastreamento (Pixel do Facebook/Meta) para: </p>
-        <ul style="list-style: disc; margin-left: 30px; margin-top: 10px;">
-            <li>Otimizar e direcionar anúncios (tráfego pago, gerido por Carlos).</li>
-            <li>Analisar o desempenho do nosso site e das campanhas de marketing.</li>
-        </ul>
-        
-        <h2 style="color: var(--gsa-gold); margin-top: 40px; font-size: 1.5rem;">2. Processamento e Entrega (Hotmart)</h2>
-        <p>Para processar pagamentos e entregar o produto (planilha), utilizamos a plataforma terceirizada **Hotmart**. Ao clicar no botão de compra, seus dados de pagamento e cadastro são processados diretamente pela Hotmart, sob suas próprias políticas de segurança e privacidade.</p>
-        
-        <h2 style="color: var(--gsa-gold); margin-top: 40px; font-size: 1.5rem;">3. Segurança e Direitos</h2>
-        <p>Seus dados são armazenados em ambiente seguro. Você tem o direito de solicitar a exclusão de seus dados, bastando entrar em contato através do nosso canal de Contato.</p>
-
-        <p style="margin-top: 40px;">Data da última atualização: [Inserir Data Atual]</p>
-        <p style="margin-top: 20px;"><a href="index.html" style="color: var(--gsa-blue); text-decoration: underline;">← Voltar para a página inicial</a></p>
+<body>
+    <nav style="position: sticky; top: 0; background: var(--white); z-index: 100;">
+        <div class="nav-content-single">
+            <div class="logo"><strong style="color:var(--gsa-blue); font-size:1.5rem;">GSA <span style="font-weight:300">GROUP</span></strong></div>
+            <!-- CORREÇÃO -->
+            <a href="../index.html" class="btn-return">Início</a>
+        </div>
+    </nav>
+    <div class="main-content-wrapper">
+        <div class="container content-area">
+            <h1>Política de Privacidade</h1>
+            <p>Sua privacidade é importante. Explicamos aqui como usamos seus dados.</p>
+            <h2>1. Coleta de Dados (Pixel)</h2>
+            <p>Usamos cookies e Pixel do Facebook para otimizar anúncios e analisar tráfego.</p>
+            <h2>2. Pagamento (Mercado Pago)</h2>
+            <p>Dados de pagamento são processados externamente pelo Mercado Pago, seguindo suas normas de segurança.</p>
+            <h2>3. Contato</h2>
+            <!-- CORREÇÃO DO LINK INTERNO -->
+            <p>Para solicitar exclusão de dados, acesse <a href="contato.html" style="color: var(--gsa-blue); text-decoration: underline;">Contato</a>.</p>
+        </div>
     </div>
+    <footer><div class="container" style="font-size: 0.75rem;">© 2025 GSA Group. Todos os direitos reservados.</div></footer>
 </body>
 </html>
