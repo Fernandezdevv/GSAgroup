@@ -140,7 +140,7 @@
         try {
             // 2. Chama o SEU servidor (Backend)
             // Nota: Quando subir pra internet, troque 'http://localhost:3000' pelo endereço real do servidor
-            const resposta = await fetch('http://localhost:3000/api/criar-pagamento', {
+            const resposta = await fetch('https://gsa-api-imyt.onrender.com/api/criar-pagamento', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
