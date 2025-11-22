@@ -1,0 +1,25 @@
+node_modules
+.env
+
+
+Pronto! Agora o Git sabe que deve ignorar essas duas coisas para sempre.
+
+#### Passo 2: Limpar a bagunça (Opcional, mas recomendado)
+
+Como você **já subiu** a pasta, criar o arquivo agora só impede que novos arquivos subam. A pasta velha continua lá.
+
+Se quiser limpar seu repositório para ficar leve e profissional, rode estes comandos no terminal do VS Code:
+
+1.  **Remove a pasta do "mundo do Git" (mas mantém no seu PC):**
+    ```bash
+    git rm -r --cached node_modules
+    ```
+2.  **Salva a mudança:**
+    ```bash
+    git commit -m "Removendo node_modules"
+    ```
+3.  **Manda pro GitHub:**
+    ```bash
+    git push
+node_modules
+.env
