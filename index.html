@@ -75,7 +75,7 @@
                     <h3>Tempo Perdido</h3>
                     <p>Fazer contas no papel ou planilhas feias gasta o tempo que você deveria usar vendendo.</p>
                 </div>
-            </div> 
+            </div>
         </div>
     </section>
 
@@ -104,7 +104,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO OFERTA -->
+    <!-- SEÇÃO OFERTA (ATUALIZADA COM CAMPO DE EMAIL) -->
     <section id="oferta" class="offer">
         <div class="container">
             <div class="offer-box animate-on-scroll">
@@ -117,92 +117,108 @@
                     <div class="price-val">R$ 67</div>
                     <p style="color:var(--success); font-weight:700; margin-bottom:30px;">Pagamento único • Vitalício</p>
                     
-                    <!-- BOTÃO INTELIGENTE (Substitua o <a> antigo por isso) -->
-<button id="btn-comprar" onclick="iniciarPagamento()" class="btn btn-success" style="width: 100%; font-size: 1.2rem;">
-    COMPRAR AGORA (R$ 67,00)
-</button>
-<p id="status-msg" style="margin-top: 10px; font-size: 0.9rem; color: var(--gsa-blue); display: none;">
-    Gerando seu link de pagamento seguro...
-</p>
+                    <!-- CAMPO DE E-MAIL (NOVIDADE) -->
+                    <div style="margin-bottom: 15px; text-align: left;">
+                        <label for="email-cliente" style="font-size: 0.9rem; font-weight: 600; color: var(--text-dark); display: block; margin-bottom: 5px;">
+                            Onde devemos enviar a planilha?
+                        </label>
+                        <input type="email" id="email-cliente" placeholder="Digite seu melhor e-mail aqui..." required
+                               style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.3s;">
+                    </div>
 
-<!-- SCRIPT DE PAGAMENTO (Cole isso logo abaixo do botão ou no final do body) -->
-<script>
-    async function iniciarPagamento() {
-        const botao = document.getElementById('btn-comprar');
-        const msg = document.getElementById('status-msg');
-        
-        // 1. Feedback visual pro cliente não clicar 10 vezes
-        botao.disabled = true;
-        botao.innerText = "⏳ Processando...";
-        botao.style.opacity = "0.7";
-        msg.style.display = "block";
-
-        try {
-            // 2. Chama o SEU servidor (Backend)
-            // Nota: Quando subir pra internet, troque 'http://localhost:3000' pelo endereço real do servidor
-            const resposta = await fetch('https://gsa-api-imyt.onrender.com/api/criar-pagamento', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    // Aqui você poderia pegar de um input, mas vamos mandar genérico por enquanto
-                    email: 'cliente_site@gsagroup.com', 
-                    nome: 'Cliente GSA'
-                })
-            });
-
-            const dados = await resposta.json();
-
-            if (dados.init_point) {
-                // 3. SUCESSO: Redireciona para o Checkout do Mercado Pago
-                window.location.href = dados.init_point;
-            } else {
-                throw new Error('Link de pagamento não gerado');
-            }
-
-        } catch (erro) {
-            console.error(erro);
-            alert("Ocorreu um erro ao gerar o pagamento. Tente novamente ou contate o suporte.");
-            
-            // Reseta o botão se der erro
-            botao.disabled = false;
-            botao.innerText = "COMPRAR AGORA (R$ 67,00)";
-            botao.style.opacity = "1";
-            msg.style.display = "none";
-        }
-    }
-</script>
+                    <!-- BOTÃO DE COMPRA -->
+                    <button id="btn-comprar" onclick="realizarPagamento()" class="btn btn-success" style="width: 100%; font-size: 1.2rem; cursor: pointer;">
+                        COMPRAR AGORA (R$ 67,00)
+                    </button>
+                    <p id="status-msg" style="margin-top: 10px; font-size: 0.9rem; color: var(--gsa-blue); display: none;">
+                        Gerando seu link de pagamento seguro...
+                    </p>
 
                     <div class="trust-icons">
                         <div><svg viewBox="0 0 24 24"><path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,11.95L12,11.95L12,11.95L12,11.95L12,11.95L12,11.95Z"/></svg> Compra Segura</div>
                         <div><svg viewBox="0 0 24 24"><path d="M11.5,22C11.64,22 11.77,22 11.9,21.96C12.55,21.82 13.09,21.38 13.34,20.78L14.23,18.66C14.61,17.73 15.63,17.25 16.6,17.55L19.33,18.39C19.89,18.55 20.47,18.36 20.82,17.91C21.18,17.46 21.23,16.85 20.96,16.35L18.23,11.23C17.79,10.4 17.93,9.38 18.57,8.72L20.66,6.55C21.08,6.11 21.18,5.46 20.92,4.94C20.66,4.41 20.09,4.1 19.5,4.16L12.5,4.92V3C12.5,2.45 12.05,2 11.5,2C10.95,2 10.5,2.45 10.5,3V4.92L3.5,4.16C2.91,4.1 2.34,4.41 2.08,4.94C1.82,5.46 1.92,6.11 2.34,6.55L4.43,8.72C5.07,9.38 5.21,10.4 4.77,11.23L2.04,16.35C1.77,16.85 1.82,17.46 2.18,17.91C2.53,18.36 3.11,18.55 3.67,18.39L6.4,17.55C7.37,17.25 8.39,17.73 8.77,18.66L9.66,20.78C9.91,21.38 10.45,21.82 11.1,21.96C11.23,22 11.36,22 11.5,22Z"/></svg> Entrega Imediata</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-    <div class="container">
-        <div class="logo">
-            <strong style="color:white; font-size:1.5rem;">GSA <span style="font-weight:300">GROUP</span></strong>
-        </div>
-        <p style="font-size:0.8rem;">Tecnologia e Inteligência para Negócios.</p>
-        
-        <div style="margin-top: 20px; font-size: 0.75rem; opacity: 0.7;">
-            <a href="footer/termos.html" style="margin: 0 10px; border-bottom:1px solid #64748b;">Termos de Uso</a>
-            <a href="footer/privacidade.html" style="margin: 0 10px; border-bottom:1px solid #64748b;">Política de Privacidade</a>
-            <a href="footer/contato.html" style="margin: 0 10px; border-bottom:1px solid #64748b;">Contato</a>
-        </div>
+    <footer>
+        <div class="container">
+            <div class="logo">
+                <strong style="color:white; font-size:1.5rem;">GSA <span style="font-weight:300">GROUP</span></strong>
+            </div>
+            <p style="font-size:0.8rem;">Tecnologia e Inteligência para Negócios.</p>
+            
+            <div style="margin-top: 20px; font-size: 0.75rem; opacity: 0.7;">
+                <a href="footer/termos.html" style="margin: 0 10px; border-bottom:1px solid #64748b;">Termos de Uso</a>
+                <a href="footer/privacidade.html" style="margin: 0 10px; border-bottom:1px solid #64748b;">Política de Privacidade</a>
+                <a href="footer/contato.html" style="margin: 0 10px; border-bottom:1px solid #64748b;">Contato</a>
+            </div>
 
-        <p style="font-size:0.7rem; margin-top:20px; opacity: 0.4;">
-           <br>
-            © 2025 GSA Group. Todos os direitos reservados.
-        </p>
-    </div>
-</footer>
-    <!-- CONEXÃO COM O JAVASCRIPT -->
+            <p style="font-size:0.7rem; margin-top:20px; opacity: 0.4;">
+               <br>
+               © 2025 GSA Group. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+    
+    <!-- SCRIPT DE PAGAMENTO (Captura Email e Envia) -->
+    <script>
+        async function realizarPagamento() {
+            const btn = document.getElementById('btn-comprar');
+            const msg = document.getElementById('status-msg');
+            const emailInput = document.getElementById('email-cliente');
+            const email = emailInput.value.trim();
+
+            // 1. Validação: O cliente digitou o e-mail?
+            if (!email || !email.includes('@') || !email.includes('.')) {
+                alert('Por favor, digite um e-mail válido para receber a planilha!');
+                emailInput.focus();
+                emailInput.style.borderColor = "red";
+                return;
+            } else {
+                emailInput.style.borderColor = "#cbd5e1"; 
+            }
+
+            btn.disabled = true;
+            btn.style.opacity = "0.7";
+            btn.innerText = "⏳ PROCESSANDO...";
+            msg.style.display = "block";
+
+            try {
+                // Chama o SEU servidor (Backend no Render)
+                const resposta = await fetch('https://gsa-api-imyt.onrender.com/api/criar-pagamento', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: email, // Manda o e-mail digitado
+                        nome: 'Cliente Site GSA'
+                    })
+                });
+
+                const dados = await resposta.json();
+
+                if (dados.init_point) {
+                    // SUCESSO: Redireciona para o Checkout do Mercado Pago
+                    window.location.href = dados.init_point; 
+                } else {
+                    throw new Error('Link de pagamento não gerado');
+                }
+
+            } catch (erro) {
+                console.error(erro);
+                alert("Ocorreu um erro ao gerar o pagamento. Tente novamente ou contate o suporte.");
+                
+                // Reseta o botão se der erro
+                btn.disabled = false;
+                btn.innerText = "COMPRAR AGORA (R$ 67,00)";
+                btn.style.opacity = "1";
+                msg.style.display = "none";
+            }
+        }
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
